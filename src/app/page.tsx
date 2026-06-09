@@ -139,6 +139,14 @@ export default async function Home() {
 
         <footer>
           <span>Self-hosted in {profile.location.split(",")[0]}</span>
+          <a
+            className="footerLink"
+            href="https://github.com/BytesAndCoffee/ByteLinks"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Built with ByteLinks
+          </a>
           <span className="footerMark">{profile.handle} / 2026</span>
         </footer>
       </section>

@@ -410,6 +410,17 @@ h2 {
   color: var(--ink);
 }
 
+.footerLink {
+  color: var(--muted);
+  transition: color 180ms ease;
+}
+
+.footerLink:hover,
+.footerLink:focus-visible {
+  color: var(--lime);
+  outline: none;
+}
+
 @media (max-width: 620px) {
   .shell {
     padding-top: 16px;
@@ -477,6 +488,12 @@ h2 {
   footer {
     gap: 12px;
     align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .footerLink {
+    order: 3;
+    width: 100%;
   }
 
   .footerMark {
