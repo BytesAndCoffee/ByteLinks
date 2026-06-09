@@ -51,6 +51,24 @@ Both guides assume DNS already points your chosen hostname to the Nginx
 server. Cloudflare proxying is optional; use SSL mode **Full (strict)** when
 enabled.
 
+### Docker Hub Quick Start
+
+The published image is available for `linux/amd64`:
+
+```bash
+docker pull bytesandcoffee/bytelinks:latest
+docker run -d \
+  --name bytelinks \
+  --restart unless-stopped \
+  -p 127.0.0.1:3000:3000 \
+  -v "$PWD/src/data:/app/data:ro" \
+  bytesandcoffee/bytelinks:latest
+```
+
+Mount a directory containing your customized `profile.json` at `/app/data`.
+Versioned releases are also published, for example
+`bytesandcoffee/bytelinks:0.1.0`.
+
 ## Updating
 
 Edit `src/data/profile.json`, regenerate `PROFILE.md`, and redeploy using the

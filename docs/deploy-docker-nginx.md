@@ -11,11 +11,24 @@ This setup runs the application in Docker and exposes it only to Nginx on
 
 ## Deploy
 
+Build from source:
+
 ```bash
 git clone https://github.com/YOUR_USER/ByteLinks.git /opt/bytelinks
 cd /opt/bytelinks
 docker compose up -d --build
 curl --fail http://127.0.0.1:3000/api/health
+```
+
+Or run the published `linux/amd64` image with your profile directory mounted:
+
+```bash
+docker run -d \
+  --name bytelinks \
+  --restart unless-stopped \
+  -p 127.0.0.1:3000:3000 \
+  -v /opt/bytelinks/src/data:/app/data:ro \
+  bytesandcoffee/bytelinks:latest
 ```
 
 The Compose service restarts automatically and includes a container health
