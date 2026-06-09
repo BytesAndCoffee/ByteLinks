@@ -69,6 +69,12 @@ Mount a directory containing your customized `profile.json` at `/app/data`.
 Versioned releases are also published, for example
 `bytesandcoffee/bytelinks:0.1.0`.
 
+The same release is published to GitHub Container Registry:
+
+```bash
+docker pull ghcr.io/bytesandcoffee/bytelinks:latest
+```
+
 ## Updating
 
 Edit `src/data/profile.json`, regenerate `PROFILE.md`, and redeploy using the

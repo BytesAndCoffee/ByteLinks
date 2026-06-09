@@ -10,6 +10,9 @@ file. This image runs the production Next.js application with Bun.
 
 Current images support `linux/amd64`.
 
+Multi-architecture release images are also available from GitHub Container
+Registry at `ghcr.io/bytesandcoffee/bytelinks`.
+
 ## Quick Start
 
 Create a profile directory and download the example profile:
