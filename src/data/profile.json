@@ -1,0 +1,100 @@
+{
+  "name": "Alex Example",
+  "handle": "alexbuilds",
+  "displayName": "Alex Example / alexbuilds",
+  "pronouns": null,
+  "location": "Your City, Country",
+  "timezone": "UTC",
+  "avatar": "https://avatars.githubusercontent.com/u/9919?v=4",
+  "tagline": "Developer, systems tinkerer, and builder of useful things.",
+  "shortBio": "Alex is a developer who enjoys practical software, self-hosting, automation, and turning ideas into maintainable tools.",
+  "bio": "I'm Alex, a developer and systems tinkerer. I build practical software, automate repetitive work, and document useful discoveries along the way. This profile is example content: replace it with your own story, links, skills, and projects.",
+  "publicSummary": [
+    "Software developer",
+    "Self-hosting enthusiast",
+    "Automation and systems builder"
+  ],
+  "roles": [
+    "Developer",
+    "Systems tinkerer",
+    "Open-source contributor"
+  ],
+  "skills": {
+    "languages": ["TypeScript", "Python", "SQL"],
+    "tools": ["Linux", "Docker", "Git", "Nginx"],
+    "focusAreas": [
+      "Web applications",
+      "Automation",
+      "Self-hosting",
+      "Developer tooling",
+      "Production operations"
+    ]
+  },
+  "interests": [
+    "Open source",
+    "Coffee",
+    "Home labs",
+    "Useful software"
+  ],
+  "links": [
+    {
+      "label": "Website",
+      "url": "https://example.com",
+      "primary": true
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/your-handle",
+      "primary": true
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com",
+      "primary": false
+    }
+  ],
+  "featuredProjects": [
+    {
+      "name": "Example Project",
+      "url": "https://github.com/your-handle/example-project",
+      "description": "Describe a project you are proud of and the problem it solves.",
+      "tags": ["TypeScript", "Next.js", "Docker"]
+    },
+    {
+      "name": "Another Useful Tool",
+      "url": "https://github.com/your-handle/another-tool",
+      "description": "Add as many featured projects as you want; the layout adapts automatically.",
+      "tags": ["Python", "automation"]
+    }
+  ],
+  "siteTone": {
+    "keywords": ["curious", "practical", "clear", "human"],
+    "voice": "Clear, friendly, technically competent, and direct."
+  },
+  "structuredData": {
+    "schemaOrgType": "Person",
+    "sameAs": [
+      "https://github.com/your-handle",
+      "https://example.com"
+    ],
+    "knowsAbout": [
+      "Software development",
+      "Linux",
+      "Automation",
+      "Self-hosting"
+    ],
+    "worksFor": {
+      "name": "Independent"
+    }
+  },
+  "sources": [
+    {
+      "label": "GitHub profile",
+      "url": "https://github.com/your-handle"
+    },
+    {
+      "label": "Personal site",
+      "url": "https://example.com"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+[Unit]
+Description=ByteLinks
+After=network.target
+
+[Service]
+Type=simple
+User=bytelinks
+Group=bytelinks
+WorkingDirectory=/opt/bytelinks
+Environment=NODE_ENV=production
+Environment=HOSTNAME=127.0.0.1
+Environment=PORT=3000
+Environment=PROFILE_PATH=/opt/bytelinks/src/data/profile.json
+ExecStart=/home/bytelinks/.bun/bin/bun run start
+Restart=on-failure
+RestartSec=5
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/opt/bytelinks
+
+[Install]
+WantedBy=multi-user.target

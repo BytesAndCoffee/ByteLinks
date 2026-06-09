@@ -1,0 +1,16 @@
+services:
+  links:
+    build:
+      context: .
+    container_name: bytelinks
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./src/data:/app/data:ro
+    healthcheck:
+      test: ["CMD", "bun", "-e", "fetch('http://localhost:3000/api/health').then(r => { if (!r.ok) process.exit(1) })"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

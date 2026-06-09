@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schema/me.schema.json",
+  "title": "Personal profile",
+  "description": "Structured content for a personal link page.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "handle",
+    "displayName",
+    "location",
+    "timezone",
+    "avatar",
+    "tagline",
+    "shortBio",
+    "bio",
+    "publicSummary",
+    "roles",
+    "skills",
+    "interests",
+    "links",
+    "featuredProjects",
+    "siteTone",
+    "structuredData",
+    "sources"
+  ],
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "handle": { "type": "string", "minLength": 1 },
+    "displayName": { "type": "string", "minLength": 1 },
+    "pronouns": { "type": ["string", "null"] },
+    "location": { "type": "string", "minLength": 1 },
+    "timezone": { "type": "string", "minLength": 1 },
+    "avatar": { "type": "string", "format": "uri" },
+    "tagline": { "type": "string", "minLength": 1 },
+    "shortBio": { "type": "string", "minLength": 1 },
+    "bio": { "type": "string", "minLength": 1 },
+    "publicSummary": { "$ref": "#/$defs/stringList" },
+    "roles": { "$ref": "#/$defs/stringList" },
+    "skills": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["languages", "tools", "focusAreas"],
+      "properties": {
+        "languages": { "$ref": "#/$defs/stringList" },
+        "tools": { "$ref": "#/$defs/stringList" },
+        "focusAreas": { "$ref": "#/$defs/stringList" }
+      }
+    },
+    "interests": { "$ref": "#/$defs/stringList" },
+    "links": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/link" }
+    },
+    "featuredProjects": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/project" }
+    },
+    "siteTone": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["keywords", "voice"],
+      "properties": {
+        "keywords": { "$ref": "#/$defs/stringList" },
+        "voice": { "type": "string", "minLength": 1 }
+      }
+    },
+    "structuredData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaOrgType", "sameAs", "knowsAbout", "worksFor"],
+      "properties": {
+        "schemaOrgType": { "type": "string", "minLength": 1 },
+        "sameAs": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "knowsAbout": { "$ref": "#/$defs/stringList" },
+        "worksFor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string", "minLength": 1 }
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/namedUrl" }
+    }
+  },
+  "$defs": {
+    "stringList": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "namedUrl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "minLength": 1 }
+      }
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url", "primary"],
+      "properties": {
+        "label": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "primary": { "type": "boolean" }
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "url", "description", "tags"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "description": { "type": "string", "minLength": 1 },
+        "tags": { "$ref": "#/$defs/stringList" }
+      }
+    }
+  }
+}
