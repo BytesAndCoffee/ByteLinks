@@ -4,9 +4,9 @@
   --canvas: #10110f;
   --panel: rgba(30, 31, 27, 0.78);
   --line: rgba(242, 240, 232, 0.13);
-  --lime: #d6ff64;
-  --violet: #b69cff;
-  --orange: #ff9d5c;
+  --teal: #18bc9c;
+  --navy: #2c3e50;
+  --slate: #233140;
 }
 
 * {
@@ -53,13 +53,13 @@ main {
 .ambientOne {
   top: -12rem;
   right: -10rem;
-  background: var(--violet);
+  background: var(--navy);
 }
 
 .ambientTwo {
   bottom: -15rem;
   left: -10rem;
-  background: var(--lime);
+  background: var(--teal);
 }
 
 .shell {
@@ -100,8 +100,8 @@ footer {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--lime);
-  box-shadow: 0 0 0 5px rgba(214, 255, 100, 0.09);
+  background: var(--teal);
+  box-shadow: 0 0 0 5px rgba(24, 188, 156, 0.12);
 }
 
 .identity {
@@ -115,7 +115,7 @@ footer {
 .avatar {
   width: 104px;
   height: 104px;
-  border: 1px solid rgba(214, 255, 100, 0.4);
+  border: 1px solid rgba(24, 188, 156, 0.55);
   border-radius: 50%;
   object-fit: cover;
   transform: rotate(-8deg);
@@ -140,12 +140,12 @@ h1 {
 }
 
 h1 span {
-  color: var(--lime);
+  color: var(--teal);
 }
 
 .handle {
   margin: 13px 0 0;
-  color: var(--violet);
+  color: var(--teal);
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.76rem;
   letter-spacing: 0.04em;
@@ -166,7 +166,7 @@ h1 span {
 }
 
 .linkCard {
-  --accent: var(--lime);
+  --accent: var(--teal);
   display: grid;
   grid-template-columns: 44px 1fr 46px;
   gap: 18px;
@@ -184,11 +184,11 @@ h1 span {
 }
 
 .linkCard.violet {
-  --accent: var(--violet);
+  --accent: var(--navy);
 }
 
 .linkCard.orange {
-  --accent: var(--orange);
+  --accent: var(--slate);
 }
 
 .linkCard:hover,
@@ -264,7 +264,7 @@ footer {
 
 .sectionLabel {
   margin: 0 0 14px;
-  color: var(--lime);
+  color: var(--teal);
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.68rem;
   letter-spacing: 0.1em;
@@ -358,7 +358,7 @@ h2 {
 
 .projectNumber,
 .projectTags {
-  color: var(--violet);
+  color: var(--teal);
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.62rem;
   letter-spacing: 0.06em;
@@ -395,7 +395,7 @@ h2 {
 .projectArrow svg {
   width: 18px;
   fill: none;
-  stroke: var(--violet);
+  stroke: var(--teal);
   stroke-linecap: round;
   stroke-width: 1.5;
   transition: transform 180ms ease;
@@ -417,7 +417,7 @@ h2 {
 
 .footerLink:hover,
 .footerLink:focus-visible {
-  color: var(--lime);
+  color: var(--teal);
   outline: none;
 }
 
